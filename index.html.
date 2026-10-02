@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Krishu 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+  --pink: #f7a8c5;
+  --deep: #b64d79;
+  --pale: #fff1f5;
+  --ink: #63364b;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fff6f8;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+h1,h2,h3 { font-family: 'Playfair Display', serif; }
+button { font: inherit; cursor: pointer; }
+.hero {
+  min-height: 100svh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 35px 22px;
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 45%,#fff 0%,#fff0f5 52%,#fbd5e3 100%);
+}
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 4px;
+  font-size: 11px; color: var(--deep);
+}
+.hero h1 {
+  font-size: clamp(48px,12vw,82px);
+  line-height: 1.08; margin: 18px 0;
+  color: #a63e6d;
+}
+.hero h1 span { font-style: italic; color: #d66c99; }
+.hero p { max-width: 330px; line-height: 1.8; color: #936278; }
+.heart-art {
+  font-size: 70px; margin: 10px 0;
+  animation: pulse 2s infinite;
+  filter: drop-shadow(0 10px 15px #e6a2bf66);
+}
+@keyframes pulse {
+  50% { transform: scale(1.12); }
+}
+.btn {
+  border: 0; border-radius: 40px;
+  background: linear-gradient(135deg,#e58bb0,#c95b8d);
+  color: white; padding: 15px 27px;
+  box-shadow: 0 8px 22px #cb69954d;
+  font-weight: 700; transition: .25s;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn.secondary {
+  background: white; color: var(--deep);
+  border: 1px solid #f3c3d5; box-shadow: none;
+}
+section {
+  padding: 75px 20px;
+  text-align: center;
+}
+.section-inner { max-width: 680px; margin: auto; }
+.kicker {
+  color: #c56a91; text-transform: uppercase;
+  font-size: 11px; letter-spacing: 3px;
+}
+h2 {
+  color: #9f456b; font-size: clamp(32px,8vw,45px);
+  margin: 12px 0;
+}
+.sub { color: #a17a8c; line-height: 1.8; }
+.letter-section { background: #fff; }
+.envelope {
+  margin: 30px auto 0; max-width: 440px;
+  padding: 30px 22px; border-radius: 20px;
+  background: linear-gradient(145deg,#fff1f5,#ffe1ec);
+  border: 1px solid #f7c9d9;
+  box-shadow: 0 14px 40px #b84f7512;
+}
+.envelope-icon { font-size: 60px; }
+.letter {
+  display: none; text-align: left;
+  padding: 25px 22px; margin-top: 22px;
+  background: #fffdfd; border-radius: 15px;
+  line-height: 1.9; white-space: pre-line;
+  animation: appear .5s ease;
+}
+.letter.show { display: block; }
+@keyframes appear {
+  from { opacity:0; transform:translateY(12px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.reasons { background: #fff0f5; }
+.cards {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 13px; margin-top: 30px;
+}
+.reason {
+  min-height: 155px; border: 1px solid #f4cada;
+  border-radius: 18px; background: #fff;
+  padding: 20px 13px; color: var(--ink);
+  box-shadow: 0 8px 20px #c36d8b0d;
+  transition: .25s;
+}
+.reason:hover { transform: translateY(-4px); }
+.reason .emoji { font-size: 30px; display:block; margin-bottom: 10px; }
+.reason strong { color: #a64b71; display: block; }
+.reason small { display:block; margin-top: 8px; line-height:1.5; color:#a17a8c; }
+.memory { background: #fff; }
+.memory-card {
+  background: #fff5f8; padding: 25px;
+  border-radius: 22px; margin-top: 25px;
+  border: 1px solid #f5d3e0;
+}
+.photo-placeholder {
+  min-height: 190px; border-radius: 16px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg,#fce0e9,#f8c4d8);
+  font-size: 60px;
+}
+.memory-card p { line-height: 1.8; }
+.quiz { background: #ffeff4; }
+.quiz-box {
+  background: white; padding: 25px 18px;
+  border-radius: 22px; margin: 25px auto 0;
+  max-width: 470px; border: 1px solid #f4ccda;
+}
+.answers { display:grid; gap:10px; margin:22px 0; }
+.answer {
+  background:#fff6f9; border:1px solid #f0c9d8;
+  border-radius:13px; padding:14px;
+  color:#91516e; text-align:left;
+}
+.answer:active { transform:scale(.98); }
+.answer.selected { background:#f9d5e3; border-color:#d66c99; }
+.feedback { min-height:30px; color:#ba5880; font-weight:600; }
+.surprise { background:linear-gradient(150deg,#f9d5e3,#fff0f5); }
+.surprise-box {
+  background:#fff; padding:30px 20px;
+  border-radius:24px; margin:25px auto 0;
+  max-width:470px; box-shadow:0 10px 35px #ad53721a;
+}
+.hidden-message {
+  display:none; padding:20px 5px;
+  line-height:1.9; animation:appear .7s;
+}
+.hidden-message.show { display:block; }
+.hidden-message h3 { font-size:29px; color:#bb5680; }
+footer {
+  text-align:center; padding:30px 15px;
+  background:#fff; color:#ae7891;
+  font-size:13px; line-height:1.8;
+}
+.floating {
+  position:fixed; bottom:-40px; z-index:5;
+  pointer-events:none; animation:floatUp 6s linear forwards;
+}
+@keyframes floatUp {
+  to { transform:translateY(-110vh) rotate(30deg); opacity:0; }
+}
+@media(min-width:600px) {
+  .cards { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">A little something for you ♡</div>
+  <div class="heart-art">💗</div>
+  <h1>Hey, my <span>Krishu!</span></h1>
+  <p>To my bakudaaaaaa, from his Bakudi.<br>
+  I made a tiny little world, just for you.</p>
+  <button class="btn" onclick="document.getElementById('letter-section').scrollIntoView({behavior:'smooth'})">
+    Open my heart ♡
+  </button>
+  <p style="font-size:12px;margin-top:28px">Scroll down, there's more for you ↓</p>
+</header>
+
+<section class="letter-section" id="letter-section">
+  <div class="section-inner">
+    <div class="kicker">From me, to you 💌</div>
+    <h2>A letter for my favourite boy</h2>
+    <p class="sub">Something I wanted you to read today.</p>
+    <div class="envelope">
+      <div class="envelope-icon">💌</div>
+      <h3>To my Krishu</h3>
+      <p class="sub">A little letter from your Bakudi</p>
+      <button class="btn" id="letterBtn" onclick="toggleLetter()">Unwrap your letter ♡</button>
+      <div class="letter" id="letter">
+        My dearest Krishu, 💗
+
+        Happy Boyfriend's Day to my bakudaaaaaa!
+
+        I don't know if I tell you enough, but you are such a special part of my life. Among all the people in this world, I'm so glad I have you to annoy, laugh with, share random things with and make beautiful memories with.
+
+        I love your little ways, our silly conversations, our crazy moments and even the things that make absolutely no sense to anyone else.
+
+        I may not always have the perfect words to express what I feel, but I hope you always know how much you mean to me. I want us to keep making memories, laughing at the silliest things and being there for each other.
+
+        Thank you for being my person and for being my Krishu.
+
+        Sending you the biggest hug and a million kisses!
+
+        Forever your Bakudi. 🧸💗
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reasons">
+  <div class="section-inner">
+    <div class="kicker">A few little things ♡</div>
+    <h2>Reasons I love you</h2>
+    <p class="sub">Tap each card, my love. There's a little something hidden inside.</p>
+    <div class="cards">
+      <button class="reason" onclick="reveal(this,'Because even an ordinary day feels special when I talk to you. 🥹')">
+        <span class="emoji">🌷</span><strong>Your presence</strong>
+        <small>Tap to reveal ♡</small>
+      </button>
+      <button class="reason" onclick="reveal(this,'Because your smile can make my entire mood better. 💗')">
+        <span class="emoji">☀️</span><strong>Your smile</strong>
+        <small>Tap to reveal ♡</small>
+      </button>
+      <button class="reason" onclick="reveal(this,'Because I can be my completely silly self with you. 🤭')">
+        <span class="emoji">🧸</span><strong>Our craziness</strong>
+        <small>Tap to reveal ♡</small>
+      </button>
+      <button class="reason" onclick="reveal(this,'Because little moments with you become my favourite memories. 📸')">
+        <span class="emoji">🦋</span><strong>Our memories</strong>
+        <small>Tap to reveal ♡</small>
+      </button>
+      <button class="reason" onclick="reveal(this,'Because you are you, and that is already a reason enough. ❤️')">
+        <span class="emoji">💞</span><strong>Just you</strong>
+        <small>Tap to reveal ♡</small>
+      </button>
+      <button class="reason" onclick="reveal(this,'Because I love having a thousand little things to tell you. 💌')">
+        <span class="emoji">🌙</span><strong>Our little talks</strong>
+        <small>Tap to reveal ♡</small>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="memory">
+  <div class="section-inner">
+    <div class="kicker">Our little universe 📸</div>
+    <h2>Little moments, big feelings</h2>
+    <p class="sub">Every picture holds a little piece of us.</p>
+    <div class="memory-card">
+      <div class="photo-placeholder">📷💗</div>
+      <p><strong>Our favourite memory</strong></p>
+      <p class="sub">Replace this space with your favourite photo together and write about the memory here.</p>
+    </div>
+    <div class="memory-card">
+      <div class="photo-placeholder">🌸🫶</div>
+      <p><strong>My favourite person</strong></p>
+      <p class="sub">Add another picture, a funny moment, or a memory you never want to forget.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quiz">
+  <div class="section-inner">
+    <div class="kicker">Let's see, mister! 😋</div>
+    <h2>How well do you know us?</h2>
+    <p class="sub">A tiny quiz for my favourite boy.</p>
+    <div class="quiz-box">
+      <p id="questionCount" class="kicker">QUESTION 1 OF 3</p>
+      <h3 id="question">Who is the cutest person in this relationship? 👀</h3>
+      <div class="answers" id="answers">
+        <button class="answer" onclick="choose(0)">A. Krishu 😎</button>
+        <button class="answer" onclick="choose(1)">B. Bakudi 🥰</button>
+        <button class="answer" onclick="choose(2)">C. Both of us 💗</button>
+      </div>
+      <div class="feedback" id="feedback"></div>
+      <button class="btn secondary" id="nextBtn" style="display:none" onclick="nextQuestion()">Next question →</button>
+    </div>
+  </div>
+</section>
+
+<section class="surprise">
+  <div class="section-inner">
+    <div class="kicker">One last thing... 🎀</div>
+    <h2>A little surprise for you</h2>
+    <p class="sub">Because you deserve a little extra love today.</p>
+    <div class="surprise-box">
+      <div style="font-size:60px">🎁</div>
+      <p>Ready, my bakudaaaa?</p>
+      <button class="btn" onclick="showSurprise()">Open your surprise 💗</button>
+      <div class="hidden-message" id="surpriseMessage">
+        <h3>I choose you, Krishu! 💖</h3>
+        If I could gift you one thing, it would be the ability to see yourself through my eyes, even just for a moment. Then you'd know just how special you are to me. 🥹
+        <br><br>
+        No matter how many times I tease you, remember that your Bakudi loves you soooo much!
+        <br><br>
+        Happy Boyfriend's Day, my love! 💋
+        <br><br>
+        <span style="font-size:32px">💗🧸🌷</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Made with all my love ♡<br>
+  Just for Krishu, from his Bakudi 🧸<br>
+  <span style="font-size:20px">∞ 💗 ∞</span>
+</footer>
+
+<script>
+function toggleLetter() {
+  const letter = document.getElementById('letter');
+  letter.classList.toggle('show');
+  document.getElementById('letterBtn').textContent =
+    letter.classList.contains('show') ? 'Close your letter ♡' : 'Unwrap your letter ♡';
+}
+function reveal(card, message) {
+  const small = card.querySelector('small');
+  if (card.dataset.open === 'yes') {
+    card.dataset.open = 'no';
+    small.textContent = 'Tap to reveal ♡';
+  } else {
+    card.dataset.open = 'yes';
+    small.textContent = message;
+  }
+}
+const questions = [
+  {
+    q: 'Who is the cutest person in this relationship? 👀',
+    a: ['Krishu 😎','Bakudi 🥰','Both of us 💗'],
+    correct: 1,
+    feedback: 'Obviously your Bakudi! But okay, you are cute too. 🤭'
+  },
+  {
+    q: 'Who loves the other more? 🥹',
+    a: ['Krishu 💕','Bakudi 💗','It is a tie!'],
+    correct: 2,
+    feedback: 'A tie! Because our love is not a competition. 🫶'
+  },
+  {
+    q: 'What is your Bakudi’s favourite thing? 🌷',
+    a: ['Chocolate 🍫','Annoying Krishu 🤭','Sleeping 😴'],
+    correct: 1,
+    feedback: 'You got it! Annoying you is a full-time job! 😂💗'
+  }
+];
+let current = 0;
+let score = 0;
+let answered = false;
+function renderQuestion() {
+  const q = questions[current];
+  document.getElementById('questionCount').textContent =
+    `QUESTION ${current+1} OF ${questions.length}`;
+  document.getElementById('question').textContent = q.q;
+  document.getElementById('answers').innerHTML = q.a.map((a,i) =>
+    `<button class="answer" onclick="choose(${i})">${a}</button>`
+  ).join('');
+  document.getElementById('feedback').textContent = '';
+  document.getElementById('nextBtn').style.display = 'none';
+  answered = false;
+}
+function choose(i) {
+  if (answered) return;
+  answered = true;
+  const q = questions[current];
+  if (i === q.correct) score++;
+  document.querySelectorAll('.answer').forEach((b,index) => {
+    b.disabled = true;
+    if (index === i) b.classList.add('selected');
+  });
+  document.getElementById('feedback').textContent = q.feedback;
+  document.getElementById('nextBtn').style.display = 'inline-block';
+}
+function nextQuestion() {
+  current++;
+  if (current < questions.length) {
+    renderQuestion();
+  } else {
+    document.getElementById('questionCount').textContent = 'QUIZ COMPLETE 💗';
+    document.getElementById('question').textContent =
+      `You got ${score} out of ${questions.length}!`;
+    document.getElementById('answers').innerHTML =
+      '<p style="line-height:1.8">The real prize is a big hug from your Bakudi! 🧸💋</p>';
+    document.getElementById('feedback').textContent = 'Love you, Krishu! ❤️';
+    document.getElementById('nextBtn').style.display = 'none';
+  }
+}
+function showSurprise() {
+  document.getElementById('surpriseMessage').classList.add('show');
+  for (let i=0; i<18; i++) setTimeout(createHeart,i*100);
+}
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'floating';
+  heart.textContent = ['💗','💕','💖','🌸','💞'][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random()*95+'vw';
+  heart.style.fontSize = (18+Math.random()*22)+'px';
+  heart.style.animationDuration = (4+Math.random()*3)+'s';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),7500);
+}
+setInterval(()=>{ if(Math.random()>.55) createHeart(); },1600);
+</script>
+</body>
+</html>
